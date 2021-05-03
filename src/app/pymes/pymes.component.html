@@ -35,7 +35,7 @@
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="empresapeque">Ir al perfil</a>
+            <a class="nav-link" href="empresagrand">Ir al perfil</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -59,12 +59,12 @@
                 <div class="col-lg-4">
                   <div class="border-bottom text-center pb-4">
                     <img
-                      src="../../assets/Pyme.jpg"
+                      src="../../assets/ecopetrol.png"
                       alt="profile"
                       class="img-lg rounded-circle mb-3"
                     />
                     <div class="mb-3">
-                      <h3>Soluciones Tecnologicas S.A</h3>
+                      <h3>Ecopetrol S.A</h3>
                       <div
                         class="d-flex align-items-center justify-content-center"
                       >
@@ -114,36 +114,26 @@
                       </div>
                     </div>
                     <p class="w-75 mx-auto mb-3">
-                      Empresa fundada en 2017 dedicada al desarrollo de software
-                      en telecomunicaciones. Nos especializamos en el desarrollo
-                      de páginas web y applicaciones móviles.
+                      Fundada el 25 de agosto de 1951, fue la primera compañia
+                      de petroleos en colombia. Actualmente es la cuarta
+                      empresapetrolera más grande de toda latinoamerica. Además,
+                      cotiza en la bolsa de valores de colombia (BVC) desde el
+                      año 2007.
                     </p>
                     <div class="d-flex justify-content-center">
-                      <a href="empresapeque"
+                      <a href="empresagrand"
                         ><button class="btn btn-success mr-1">
                           Ir al perfil
                         </button></a
                       >
-                      <button class="btn btn-success" (click)="goPython()">
-                        Actualizar Feed
-                      </button>
+                      <button class="btn btn-success">Actualizar Feed</button>
                     </div>
                   </div>
                   <div class="border-bottom py-4">
                     <p>Servicios</p>
                     <div>
                       <label class="badge badge-outline-dark"
-                        >Telecomunicaciones</label
-                      >
-                      <label class="badge badge-outline-dark"
-                        >Desarrollo Aplicaciones Móviles</label
-                      >
-                      <label class="badge badge-outline-dark"
-                        >Desarrollo Pasarelas de Pagos</label
-                      >
-                      <label class="badge badge-outline-dark">Diseño web</label>
-                      <label class="badge badge-outline-dark"
-                        >Seguridad informatica</label
+                        >Sector Petrolero</label
                       >
                     </div>
                   </div>
@@ -180,12 +170,12 @@
                     </p>
                     <p class="clearfix">
                       <span class="float-left"> Telefono </span>
-                      <span class="float-right text-muted"> 751 4104 </span>
+                      <span class="float-right text-muted"> 722 3451 </span>
                     </p>
                     <p class="clearfix">
                       <span class="float-left"> E-Mail </span>
                       <span class="float-right text-muted">
-                        recursos@solucionestech.com
+                        marketing@ecopetrol.com
                       </span>
                     </p>
                   </div>
@@ -226,8 +216,8 @@
                   </div>
                   <div class="profile-feed">
                     <div
-                      class="d-flex align-items-start profile-feed-item"
-                      *ngFor="let c of infoConvocatorias.convocas"
+                      class="d-flex align-items-start profile-feed-item m-4"
+                      *ngFor="let c of infoPymes.pymes"
                     >
                       <img
                         src="../../assets/{{ c.rutaImagen }}"
@@ -237,19 +227,23 @@
                       />
                       <div class="ml-4">
                         <h6>
-                          {{ c.empresa }}
+                          {{ c.nombre }}
                           <small class="ml-4 text-muted"
                             ><i class="mdi mdi-clock mr-1"></i
                             >{{ c.fechaPubl }}</small
                           >
                         </h6>
                         <p>
-                          <b style="color: cadetblue">Titulo: </b> {{ c.titulo
-                          }}<br />
-                          <b style="color: cadetblue">Descripcion: </b>
-                          {{ c.descripcion }}<br />
-                          <b style="color: cadetblue">Requisitos: </b>
-                          {{ c.requisitos }}
+                          <b style="color: cadetblue">Macro Sector:</b>
+                          {{ c.macrosector }} <br />
+                          <b style="color: cadetblue">Micro Sector:</b>
+                          {{ c.ciiu }} <br />
+                          <b style="color: cadetblue"> Ingresos Anuales:</b>
+                          {{ c.ingresosOperacionales | currency }} <br />
+                          <b style="color: cadetblue"> Departamento: </b
+                          >{{ c.departamento }} <br />
+                          <b style="color: cadetblue"> Ciudad: </b>
+                          {{ c.ciudad }}
                         </p>
                         <p class="small text-muted mt-2 mb-0">
                           <span> <i class="mdi mdi-star mr-1"></i>4 </span>

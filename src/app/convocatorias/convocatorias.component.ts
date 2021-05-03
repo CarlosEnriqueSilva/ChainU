@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Convocatoria } from './Convocatoria';
-import { dataConvocatorias } from './dataConvocatorias';
+import { InfoConvocatoriasService } from './InfoConvocatorias.service';
 
 @Component({
   selector: 'app-convocatorias',
@@ -8,12 +7,7 @@ import { dataConvocatorias } from './dataConvocatorias';
   styleUrls: ['./convocatorias.component.css'],
 })
 export class ConvocatoriasComponent implements OnInit {
-  constructor() {}
-  convocatorias: Array<Convocatoria>;
-  getListaConvoca(): Array<Convocatoria> {
-    return dataConvocatorias;
-  }
-  ngOnInit() {
-    this.convocatorias = this.getListaConvoca();
-  }
+  constructor(public infoConvocatorias: InfoConvocatoriasService) {}
+  goPython() {}
+  ngOnInit() {}
 }
